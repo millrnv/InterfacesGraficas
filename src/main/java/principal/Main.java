@@ -1,7 +1,6 @@
-package org.example;
+package principal;
 
-import InterfacesGraficas.Ventana;
-import InterfacesGraficas.VentanaTabla;
+import vista.*;
 
 import javax.swing.*;
 
@@ -13,7 +12,16 @@ public class Main {
             String[] nombreColumnas = {"Columna1", "Columna2"};
 
         Ventana ventana1= new Ventana("Menu Intranet",400,500);
-        VentanaTabla ventanaTabla1 = new VentanaTabla(datos,nombreColumnas);
+        //VentanaTabla ventanaTabla1 = new VentanaTabla(datos,nombreColumnas);
+
+
+
+
+
+
+
+
+
 
 
         });

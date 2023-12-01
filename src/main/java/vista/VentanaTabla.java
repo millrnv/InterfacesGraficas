@@ -1,10 +1,8 @@
-package InterfacesGraficas;
+package vista;
 import java.awt.*;
 import javax.swing.*;
 import java.awt.event.*;
 import javax.swing.table.DefaultTableModel;
-
-import static com.sun.java.accessibility.util.AWTEventMonitor.addWindowListener;
 
 public class VentanaTabla extends JFrame {
 

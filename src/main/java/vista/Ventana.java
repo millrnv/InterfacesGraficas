@@ -1,4 +1,4 @@
-package InterfacesGraficas;
+package vista;
 
 import javax.swing.*;
 import java.awt.*;
@@ -6,12 +6,13 @@ import java.awt.event.*;
 import javax.swing.text.InternationalFormatter;
 
 
+
 public class Ventana extends JFrame implements ActionListener{
 
     private final Font fuenteTitulo;
     private final Font fuenteTexto;
 
-
+    private JMenuBar menuBar;
 
 
     public Ventana(String nombre, int largoX, int largoY){
@@ -28,6 +29,8 @@ public class Ventana extends JFrame implements ActionListener{
         this.setLayout(null);
         this.fuenteTitulo = new Font("Calibri",3,20);
         this.fuenteTexto = new Font("Calibri",1,14);
+
+
 
     }
 
@@ -94,6 +97,11 @@ public class Ventana extends JFrame implements ActionListener{
     @Override
     public void actionPerformed(ActionEvent e) {
 
+
+
     }
+
+
+
 
 }
