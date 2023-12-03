@@ -1,5 +1,6 @@
-package org.example;
+package modelo;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Carrera {
@@ -9,6 +10,11 @@ public class Carrera {
     private int cantSemestres;
     private List<Estudiante> estudiantes;
 
+    public Carrera(String nombreCarrera, String codCarrera, int cantSemestres) {
+        this.nombreCarrera = nombreCarrera;
+        this.codCarrera = codCarrera;
+        this.cantSemestres = cantSemestres;
+    }
 
     public void setNombreCarrera(String nombreCarrera){
         this.nombreCarrera = nombreCarrera;
@@ -39,7 +45,7 @@ public class Carrera {
     }
 
 
-    public boolean EstudianteExiste(Estudiante estudiante){
+    public boolean estudianteExiste(Estudiante estudiante){
 
         for (Estudiante e : this.estudiantes){
             if(estudiante.getRut().equals(e.getRut())){
@@ -48,6 +54,17 @@ public class Carrera {
         }
         return false;
     }
+
+    public List<Estudiante> buscarEstudiantes(String nombre) {
+        List<Estudiante> estudiantesEncontrados = new ArrayList<>();
+        for(Estudiante estudiante : estudiantes){
+            if(estudiante.getNombre().equals(nombre)){
+                estudiantesEncontrados.add(estudiante);
+            }
+        }
+        return estudiantesEncontrados;
+    }
+
 
     public Estudiante agregarEstudiante(Estudiante estudiante){
         this.estudiantes.add(estudiante);
